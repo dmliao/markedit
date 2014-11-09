@@ -35,17 +35,17 @@ body {
 .cm-formatting-list {
 	font-weight: 700;
 }
-.cm-header1 {
+.cm-header-1 {
 	font-size: 36px;
 	line-height: 48px;
 }
 
-.cm-header2 {
+.cm-header-2 {
 	font-size: 32px;
 	line-height: 40px;
 }
 
-.cm-header3 {
+.cm-header-3 {
 	font-size: 28px;
 	line-height: 36px;
 }
