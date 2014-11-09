@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mini Code Editor</title>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/vendor/jquery.layout_and_plugins.min.js"></script>
+<script src="node_modules/codemirror/lib/codemirror.js"></script>
+<script src="node_modules/codemirror/mode/markdown/markdown.js"></script>
+<script src="js/vendor/continuelist.js"></script>
+<script src="js/lib/titlebar.js"></script>
+<script src="js/lib/layout.js"></script>
+
+<script src="editor.js"></script>
+<script type="text/javascript">
+    
+    </script>
+
+<link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="node_modules/codemirror/theme/monokai.css">
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="ui-layout-center">
+    <div class='middle-north'>
+    <div class="buttons">
+    <button id="new"> <span class='fa fa-fw fa-file'></span>New  </button>
+    <button id="open"><span class='fa fa-fw fa-folder-o'></span>Open </button>
+    <button id="save"><span class='fa fa-fw fa-save'></span>Save </button>
+    </div>
+    </div>
+    <div class="middle-center">
+    <div id="editor"></div>
+    </div>
+</div>
+<div class="ui-layout-north">
+    <div class='titlebar'>
+        <span class='titlebar-text'>MarkEdit</span>
+       <div class='titlebar-close-button'><img src='img/button_close.png'></div>
+    </div>
+    
+</div>
+<div class="ui-layout-south">
+    
+<div class="info">
+  <label>Filename: </label><span id="title"></span>
+  <label>Mode: </label><span id="mode"></span>
+</div>
+</div>
+
+<input style="display:none;" id="openFile" type="file" />
+<input style="display:none;" id="saveFile" type="file" nwsaveas />
+</body>
+</html>

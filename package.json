@@ -1,0 +1,19 @@
+{
+  "name": "MarkEdit",
+  "version": "0.1.11",
+  "description": "A sort-of visual markdown editor.",
+  "main": "main.html",
+  "window": {
+    "width": 640,
+    "height": 480,
+    "show": false,
+    "title": "MarkEdit",
+    "toolbar": false,
+    "frame": false
+  },
+  "dependencies": {
+    "font-awesome": "^4.2.0",
+    "codemirror": "^4.7.0",
+    "jquery": "^1.11.1"
+  }
+}
