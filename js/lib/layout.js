@@ -3,8 +3,7 @@ function initLayout() {
         $("body").layout({applyDemoStyles: true,
             center__onresize:       "middleLayout.resizeAll",
             north: {
-                closable: false,
-                size: 36
+                closable: false
             },
             south: {
                 closable: false

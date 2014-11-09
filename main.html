@@ -5,6 +5,7 @@
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/vendor/jquery.layout_and_plugins.min.js"></script>
+<script src="bower_components/Countable/Countable.js"></script>
 <script src="node_modules/codemirror/lib/codemirror.js"></script>
 <script src="node_modules/codemirror/mode/markdown/markdown.js"></script>
 <script src="js/vendor/continuelist.js"></script>
@@ -26,9 +27,9 @@
 <div class="ui-layout-center">
     <div class='middle-north'>
     <div class="buttons">
-    <button id="new"> <span class='fa fa-fw fa-file'></span>New  </button>
-    <button id="open"><span class='fa fa-fw fa-folder-o'></span>Open </button>
-    <button id="save"><span class='fa fa-fw fa-save'></span>Save </button>
+    <button class='btn' id="new"> <i class='fa fa-fw fa-file'></i>New  </button>
+    <button class='btn' id="open"><i class='fa fa-fw fa-folder-o'></i>Open </button>
+    <button class='btn' id="save"><i class='fa fa-fw fa-save'></i>Save </button>
     </div>
     </div>
     <div class="middle-center">
@@ -37,16 +38,19 @@
 </div>
 <div class="ui-layout-north">
     <div class='titlebar'>
-        <span class='titlebar-text'>MarkEdit</span>
-       <div class='titlebar-close-button'><img src='img/button_close.png'></div>
+        <div class='titlebar-text'>MarkEdit</div>
+       <div id='close-button' class='titlebar-button'><i class='fa fa-fw fa-times'></i></div>
+       <div id='maximize-button' class='titlebar-button'><i class="fa fa-plus-square-o"></i></div>
+       <div id='unmaximize-button' class='titlebar-button'><i class="fa fa-minus-square-o"></i></div>
+       <div id='minimize-button' class='titlebar-button'><i class="fa fa-fw fa-minus"></i></div>
+       <div class='titlebar-clear'></div>
     </div>
     
 </div>
 <div class="ui-layout-south">
     
 <div class="info">
-  <label>Filename: </label><span id="title"></span>
-  <label>Mode: </label><span id="mode"></span>
+  <span id='word-count'>0</span> Words
 </div>
 </div>
 

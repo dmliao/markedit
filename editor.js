@@ -7,6 +7,7 @@ var hasWriteAccess;
 var gui = require("nw.gui");
 var fs = require("fs");
 var clipboard = gui.Clipboard.get();
+var resizeTimeout;
 
 function newFile() {
   fileEntry = null;
@@ -146,12 +147,38 @@ onload = function() {
   onresize();
 
   gui.Window.get().show();
+
+  
+
+  var win = gui.Window.get();
+  win.on('resize', onresize);
   initTitlebar();
   initLayout();
+  initCountable();
 
 };
 
+initCountable = function() {
+  Countable.live($('#editor')[0], function(counter) {
+    $('#word-count').text(counter.words);
+        $('#paragraph-count').text(counter.paragraphs);
+        $('#character-count').text(counter.all);
+  }, {
+    hardReturns: false,
+            stripTags: false,
+            ignoreReturns: false
+  });
+};
+
 onresize = function() {
-  var container = document.getElementById('editor');
+  window.clearTimeout(resizeTimeout);
   editor.refresh();
+  resizeTimeout = window.setTimeout(function(){
+    var container = document.getElementById('editor');
+      $("#editor").css("min-height", function(){ 
+        return $('.middle-center').height();
+    });
+    
+  },500);
+  
 }

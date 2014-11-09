@@ -4,8 +4,8 @@
   "description": "A sort-of visual markdown editor.",
   "main": "main.html",
   "window": {
-    "width": 640,
-    "height": 480,
+    "width": 800,
+    "height": 600,
     "show": false,
     "title": "MarkEdit",
     "toolbar": false,

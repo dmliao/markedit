@@ -1,0 +1,12 @@
+{
+  "name": "MarkEdit",
+  "version": "0.0.1",
+  "author": "Diana Liao",
+  "description": "A sort-of visual Markdown editor",
+  "main": "editor.js",
+  "private": false,
+  "dependencies": {
+    
+    "Countable": "^2.1.0"
+  }
+}
